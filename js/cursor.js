@@ -10,8 +10,8 @@ function cursor(e) {
 
 window.addEventListener('DOMContentLoaded', cursor);
 window.addEventListener('mousemove', cursor);
-document.addEventListener('mouseenter', () => mouseCursor.style.display = 'block');
-document.addEventListener('mouseleave', () => mouseCursor.style.display = 'none');
+document.addEventListener('mouseenter', () => cursor.style.display = 'block');
+document.addEventListener('mouseleave', () => cursor.style.display = 'none');
 
 document.addEventListener('mousedown', function(e){
     cursor.classList.add("click");
