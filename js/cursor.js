@@ -1,15 +1,15 @@
-var cursor = document.querySelector('.cursor');
+var mousecursor = document.querySelector('.cursor');
 var h_elem = Array.from(document.querySelectorAll('p'));
 
-function cursor(e) {
+function move(e) {
   var x = e.clientX;
   var y = e.clientY;
   cursor.style.left = x + 'px';
   cursor.style.top = y + 'px';
 }
 
-window.addEventListener('DOMContentLoaded', cursor);
-window.addEventListener('mousemove', cursor);
+window.addEventListener('DOMContentLoaded', move);
+window.addEventListener('mousemove', move);
 document.addEventListener('mouseenter', () => cursor.style.display = 'block');
 document.addEventListener('mouseleave', () => cursor.style.display = 'none');
 
