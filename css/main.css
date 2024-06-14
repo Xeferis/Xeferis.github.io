@@ -28,8 +28,12 @@ body {
 }
 
 .base:hover span:before {
-    animation: dots 2s linear infinite,
-    blink-caret .8s step-end infinite;
+    animation: dots 2s linear infinite;
+    content: '';
+  }
+
+.base span{
+    animation: blink-caret .8s step-end infinite;
     content: '';
   }
 
