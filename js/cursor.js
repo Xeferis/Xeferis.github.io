@@ -28,7 +28,7 @@ h_elem.forEach(elem => {
     cursor.classList.add('hover');
   })
 //To remove the class when it doesn't hover the text
-elem.addEventListener('mouseleave', function (x) {
+h_elem.addEventListener('mouseleave', function (x) {
     cursor.classList.remove('hover');
   })
 });
