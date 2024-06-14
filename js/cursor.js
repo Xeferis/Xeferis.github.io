@@ -29,7 +29,7 @@ document.addEventListener('mouseout', function(e){
 
 
 h_elem.forEach(text => {
-  text.addEventListener('mousemove', function() {
+  text.addEventListener('mouseenter', function() {
     cursor.classList.add('hover');
   })
 //To remove the class when it doesn't hover the text
