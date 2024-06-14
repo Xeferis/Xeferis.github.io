@@ -28,24 +28,30 @@ body {
 }
 
 .base:hover span:before {
-    animation: dots 2s linear infinite;
+    animation: dots 2s linear infinite,
+    blink-caret .8s step-end infinite;
     content: '';
   }
 
-  @keyframes dots {
-    0%{
-      content: '   ';
-    }
-    25% {
-      content: '.  ';
-    }
-    50% {
-      content: '.. ';
-    }
-    75% {
-      content: '...';
-    }
-    100% {
-      content: '   ';
-    }
+@keyframes dots {
+  0%{
+    content: '   ';
+  }
+  25% {
+    content: '.  ';
+  }
+  50% {
+    content: '.. ';
+  }
+  75% {
+    content: '...';
+  }
+  100% {
+    content: '   ';
+  }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: whitesmoke; }
 }
