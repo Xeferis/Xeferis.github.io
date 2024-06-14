@@ -15,7 +15,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #161616;
-    background: radial-gradient(#323232, #161616);
+    background: radial-gradient(#aaaaaa, #161616);
 }
 
 .base {
