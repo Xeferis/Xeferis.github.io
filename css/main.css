@@ -34,6 +34,7 @@ body {
   }
 
 .base span{
+    border-right: .10em solid whitesmoke;
     animation: blink-caret .8s step-end infinite;
   }
 
