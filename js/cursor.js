@@ -26,6 +26,7 @@ document.addEventListener('mouseup', function(e){
 p_elem.forEach(elem => {
     elem.addEventListener('mouseover', function(x) {
     cursor.classList.add('hover');
+    
   })
 //To remove the class when it doesn't hover the text
     elem.addEventListener('mouseleave', function (x) {
