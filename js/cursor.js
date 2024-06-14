@@ -35,4 +35,4 @@ h_elem.forEach(elem => {
 elem.addEventListener('mouseleave', function (x) {
     cursor.classList.remove('hover');
   })
-})
+});
