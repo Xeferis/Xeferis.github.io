@@ -1,4 +1,4 @@
-var mousecursor = document.querySelector('.cursor');
+var cursor = document.querySelector('.cursor');
 var h_elem = Array.from(document.querySelectorAll('p'));
 
 function move(e) {
@@ -28,7 +28,7 @@ h_elem.forEach(elem => {
     cursor.classList.add('hover');
   })
 //To remove the class when it doesn't hover the text
-h_elem.addEventListener('mouseleave', function (x) {
+    elem.addEventListener('mouseleave', function (x) {
     cursor.classList.remove('hover');
   })
 });
