@@ -34,7 +34,7 @@ body {
 
   @keyframes dots {
     0%{
-      content: '  ';
+      content: '   ';
     }
     25% {
       content: '.  ';
