@@ -4,7 +4,6 @@ var h_elem = Array.from(document.querySelectorAll('p'));
 document.addEventListener('mousemove', function(e){
   var x = e.clientX;
   var y = e.clientY;
-  cursor.style.opacity = 1;
   cursor.style.left = x + 'px';
   cursor.style.top = y + 'px';
 }
@@ -20,6 +19,10 @@ document.addEventListener('mouseup', function(e){
   }
 );
 
+document.addEventListener('mouseenter', function(e){
+    cursor.style.opacity = 1;
+  }
+);
 
 document.addEventListener('mouseleave', function(e){
     cursor.style.opacity = 0;
