@@ -1,5 +1,5 @@
 var cursor = document.querySelector('.cursor');
-var h_elem = Array.from(document.querySelectorAll('p'));
+var p_elem = Array.from(document.querySelectorAll('p'));
 
 function move(e) {
   var x = e.clientX;
@@ -10,8 +10,8 @@ function move(e) {
 
 window.addEventListener('DOMContentLoaded', move);
 window.addEventListener('mousemove', move);
-document.addEventListener('mouseenter', () => cursor.style.display = 'block');
-document.addEventListener('mouseleave', () => cursor.style.display = 'none');
+document.addEventListener('mouseenter', () => cursor.style.opacity = 1);
+document.addEventListener('mouseleave', () => cursor.style.opacity = 0);
 
 document.addEventListener('mousedown', function(e){
     cursor.classList.add("click");
@@ -23,7 +23,7 @@ document.addEventListener('mouseup', function(e){
   }
 );
 
-h_elem.forEach(elem => {
+p_elem.forEach(elem => {
     elem.addEventListener('mouseover', function(x) {
     cursor.classList.add('hover');
   })
