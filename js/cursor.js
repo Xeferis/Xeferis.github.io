@@ -5,7 +5,7 @@ document.addEventListener('mousemove', function(e){
   cursor.classList.remove("hover");
   var x = e.clientX;
   var y = e.clientY;
-  cursor.styleopacity = 1;
+  cursor.style.opacity = 1;
   cursor.style.left = x + 'px';
   cursor.style.top = y + 'px';
 }
