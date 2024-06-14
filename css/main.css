@@ -32,16 +32,16 @@ body {
   }
 
   @keyframes dots {
-    0%, 20% {
-      content: '. ';
+    0%{
+      content: '  ';
     }
-    40% {
+    25% {
+      content: '.  ';
+    }
+    50% {
       content: '.. ';
     }
-    60% {
+    100% {
       content: '...';
-    }
-    90%, 100% {
-      content: '   ';
     }
 }
