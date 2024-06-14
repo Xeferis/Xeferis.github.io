@@ -10,6 +10,8 @@ function cursor(e) {
 
 window.addEventListener('DOMContentLoaded', cursor);
 window.addEventListener('mousemove', cursor);
+document.addEventListener('mouseenter', () => mouseCursor.style.display = 'block');
+document.addEventListener('mouseleave', () => mouseCursor.style.display = 'none');
 
 document.addEventListener('mousedown', function(e){
     cursor.classList.add("click");
@@ -20,18 +22,6 @@ document.addEventListener('mouseup', function(e){
     cursor.classList.remove("click");
   }
 );
-
-document.addEventListener('mouseenter', function(e){
-    cursor.style.opacity = 1;
-  }
-);
-
-document.addEventListener('mouseleave', function(e){
-    cursor.style.opacity = 0;
-  }
-);
-
-
 
 h_elem.forEach(elem => {
     elem.addEventListener('mouseover', function(x) {
