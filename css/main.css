@@ -34,7 +34,6 @@ body {
 
 .base span{
     animation: blink-caret .8s step-end infinite;
-    content: '';
   }
 
 @keyframes dots {
