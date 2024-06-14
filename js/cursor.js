@@ -1,7 +1,8 @@
 var cursor = document.querySelector('.cursor');
+var h_elems = document.querySelectorAll('p');
 
 document.addEventListener('mousemove', function(e){
-  cursor.classList.remove("hover")
+  cursor.classList.remove("hover");
   var x = e.clientX;
   var y = e.clientY;
   cursor.styleopacity = 1;
@@ -11,12 +12,12 @@ document.addEventListener('mousemove', function(e){
 );
 
 document.addEventListener('mousedown', function(e){
-    cursor.classList.add("click")
+    cursor.classList.add("click");
   }
 );
 
 document.addEventListener('mouseup', function(e){
-    cursor.classList.remove("click")
+    cursor.classList.remove("click");
   }
 );
 
@@ -30,7 +31,7 @@ document.addEventListener('mouseenter', function(e){
   }
 );
 
-document.addEventListener('mouseover', function(e){
-    cursor.classList.add("hover")
+h_elems.addEventListener('mouseover', function(e){
+    cursor.classList.add("hover");
   }
 );
