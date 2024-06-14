@@ -1,5 +1,5 @@
 var cursor = document.querySelector('.cursor');
-var h_elems = document.querySelectorAll('p');
+var h_elem = Array.from(document.querySelectorAll('p'));
 
 document.addEventListener('mousemove', function(e){
   cursor.classList.remove("hover");
@@ -26,12 +26,14 @@ document.addEventListener('mouseout', function(e){
   }
 );
 
-document.addEventListener('mouseenter', function(e){
-    cursor.style.opacity = 1;
-  }
-);
 
-h_elems.addEventListener('mouseover', function(e){
-    cursor.classList.add("hover");
-  }
-);
+
+h_elem.forEach(text => {
+  text.addEventListener('mousemove', function() {
+    cursor.classList.add('hover');
+  })
+//To remove the class when it doesn't hover the text
+  text.addEventListener('mouseleave', function () {
+    cursor.classList.remove('hover');
+  })
+})
