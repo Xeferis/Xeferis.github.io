@@ -21,7 +21,7 @@ document.addEventListener('mouseup', function(e){
   }
 );
 
-document.addEventListener('mouseout', function(e){
+document.addEventListener('mouseleave', function(e){
     cursor.style.opacity = 0;
   }
 );
