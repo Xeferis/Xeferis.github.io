@@ -20,15 +20,16 @@ document.addEventListener('mouseup', function(e){
   }
 );
 
+/*
 document.addEventListener('mouseout', function(e){
     cursor.style.opacity = 0;
   }
 );
-
+*/
 
 
 h_elem.forEach(elem => {
-    elem.addEventListener('mouseenter', function(x) {
+    elem.addEventListener('mousemove', function(x) {
     cursor.classList.add('hover');
   })
 //To remove the class when it doesn't hover the text
