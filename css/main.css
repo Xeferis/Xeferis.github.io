@@ -1,9 +1,15 @@
+:root {
+  --bg_color: #161616;
+  --fg_color: whitesmoke;
+}
+
 * {
     cursor: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+
 html {
     width: 100%;
     height: 100%;
@@ -15,7 +21,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #161616;
+    background-color: var(--bg_color);
 }
 
 .base {
@@ -23,7 +29,18 @@ body {
     font-family: 'Courier New', monospace;
     font-size: 30px;
     white-space: nowrap;
-    color: whitesmoke
+    color: var(--fg_color);
+    background-color: transparent;
+    transition-property: background-color, color;
+    transition-duration: .5s;
+}
+.base:hover {
+  background-color: var(--fg_color);
+  color: var(--bg_color);
+}
+
+.base:hover span{
+  border-color: var(--bg_color);
 }
 
 .base:hover span:before {
@@ -32,7 +49,7 @@ body {
   }
 
 .base span{
-    border-right: .10em solid whitesmoke;
+    border-right: .10em solid var(--fg_color);
     animation: blink-caret .8s step-end infinite;
   }
 
@@ -56,5 +73,5 @@ body {
 
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: whitesmoke; }
+  50% { border-color: var(--fg_color); }
 }
