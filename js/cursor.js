@@ -10,8 +10,8 @@ function move(e) {
 
 window.addEventListener('DOMContentLoaded', move);
 window.addEventListener('mousemove', move);
-document.addEventListener('mouseenter', () => cursor.style.opacity = 1);
-document.addEventListener('mouseleave', () => cursor.style.opacity = 0);
+document.addEventListener('mouseover', () => cursor.style.opacity = 1);
+document.addEventListener('mouseout', () => cursor.style.opacity = 0);
 
 document.addEventListener('mousedown', function(e){
     cursor.classList.add("click");
