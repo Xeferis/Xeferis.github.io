@@ -7,9 +7,15 @@ export default {
     "./plugins/**/*.{js,ts}",
     "./app.vue",
     "./error.vue",
+    "nuxt.config.ts"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        main: "#161616",
+        second: "#f5f5f5"
+      },
+    },
   },
   plugins: [],
 }
