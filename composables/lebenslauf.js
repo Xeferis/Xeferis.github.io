@@ -1,4 +1,5 @@
 export default function () {
+    // TODO: Correct Dates
     const lebenslauf = [
         {
             id: 0,
@@ -92,5 +93,6 @@ export default function () {
                 {name: "Windows", level: 2},
             ]
         }
-    ]
+    ];
+    return lebenslauf;
 }
