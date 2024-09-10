@@ -7,22 +7,13 @@
     transition-property: background-color, color;
     transition-duration: .5s;
 }
-.base:hover {
-  background-color: var(--fg_color);
-  color: var(--bg_color);
-}
-
-.base:hover span{
-  border-color: var(--bg_color);
-}
 
 .base:hover span:before {
     animation: dots 2s linear infinite;
     content: '';
   }
 
-.base span{
-    border-right: .10em solid var(--fg_color);
+.blink{
     animation: blink-caret .8s step-end infinite;
   }
 

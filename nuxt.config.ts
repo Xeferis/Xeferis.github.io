@@ -15,6 +15,9 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      script: [
+        { src: "/js/customCursor.js"},
+      ],
       title: 'Xeferis Portfolio',
       titleTemplate: '%s - Xeferis Portfolio',
       meta: [
@@ -39,7 +42,7 @@ export default defineNuxtConfig({
         { rel: "icon", type:"image/png", sizes: "16x16", href: "/favicon-16x16.png"},
       ],
       htmlAttrs: {
-        class: "w-full h-full box-border m-0 p-0"
+        class: "w-full h-full box-border m-0 p-0 cursor-none"
       },
       bodyAttrs: {
         class: 'bg-main flex justify-center items-center h-screen w-screen'
