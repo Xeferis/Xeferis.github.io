@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
       const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
 
-      const thresholdPercentage = 0.3; // 10% des maximalen Abstands als Schwellenwert
+      const thresholdPercentage = 0.2; // 10% des maximalen Abstands als Schwellenwert
 
       const thresholdDistance = maxDistance * thresholdPercentage;
       let percentageDistance;
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
 
-      const dampingFactor = .8; // Je höher der Wert, desto schneller nimmt der Abstand ab
+      const dampingFactor = 1; // Je höher der Wert, desto schneller nimmt der Abstand ab
       const dampedPercentageDistance = Math.pow(percentageDistance, dampingFactor);
 
       cursor.style.opacity = dampedPercentageDistance;
