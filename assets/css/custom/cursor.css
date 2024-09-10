@@ -4,25 +4,25 @@
   }
 }
 
-.cursor{
-    width: 1px;
-    height: 1px;
-    box-shadow: 0 0 200px 100px #d67129;
-    border-radius: 100%;
-    position: fixed;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    transition: box-shadow .5s, height .3s, width .3s, opacity .3s;
-  }
+.cursor {
+  width: 1px;
+  height: 1px;
+  box-shadow: 0 0 200px 100px #d67129;
+  border-radius: 100%;
+  position: fixed;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: box-shadow 0.5s, height 0.3s, width 0.3s, opacity 0.3s;
+}
 
-  .click {
-    background-color: rgba(255,255,255,.5);
-  }
+.click {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
-  .hover {
-    width: 1px;
-    height: 1px;
-    box-shadow: 0 0 10px 10px white;
-    opacity: 0 !important;
-  }
+.hover {
+  width: 1px;
+  height: 1px;
+  box-shadow: 0 0 10px 10px white;
+  opacity: 0 !important;
+}
