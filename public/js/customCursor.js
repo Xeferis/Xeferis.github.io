@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
 
-      const dampingFactor = 1; // Je höher der Wert, desto schneller nimmt der Abstand ab
+      const dampingFactor = .8; // Je höher der Wert, desto schneller nimmt der Abstand ab
       const dampedPercentageDistance = Math.pow(percentageDistance, dampingFactor);
 
       cursor.style.opacity = dampedPercentageDistance;
