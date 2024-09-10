@@ -5,6 +5,7 @@
 }
 
 .cursor {
+  z-index: -1;
   width: 1px;
   height: 1px;
   box-shadow: 0 0 200px 100px #d67129;
