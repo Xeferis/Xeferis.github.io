@@ -4,38 +4,43 @@
 }
 
 .base {
-    transition-property: background-color, color;
-    transition-duration: .5s;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
 }
 
 .base:hover span:before {
-    animation: dots 2s linear infinite;
-    content: '';
-  }
+  animation: dots 2s linear infinite;
+  content: "";
+}
 
-.blink{
-    animation: blink-caret .8s step-end infinite;
-  }
+.blink {
+  animation: blink-caret 0.8s step-end infinite;
+}
 
 @keyframes dots {
-  0%{
-    content: '   ';
+  0% {
+    content: "   ";
   }
   25% {
-    content: '.  ';
+    content: ".  ";
   }
   50% {
-    content: '.. ';
+    content: ".. ";
   }
   75% {
-    content: '...';
+    content: "...";
   }
   100% {
-    content: '   ';
+    content: "   ";
   }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--fg_color); }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--fg_color);
+  }
 }
