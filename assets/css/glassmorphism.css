@@ -6,8 +6,8 @@
   margin: 5px;
   padding: 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 
@@ -67,12 +67,19 @@
 }
 
 .glass-card {
+  transition: .5s;
   width: 240px;
   height: 360px;
 }
 
+.glass-card:hover {
+  color: white;
+  background: rgba(25,25,25,0.3);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
 .glass-nav{
-  
   display: flex;
   justify-content: space-evenly;
   padding: 1px;
