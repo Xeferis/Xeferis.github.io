@@ -1,16 +1,80 @@
-.glass-card {
-  width: 240px;
-  height: 360px;
-  background: rgba(255, 255, 255, 0.3);
+body {
+  display: flex;
+  background-image: url("https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg?cs=srgb&dl=pexels-zaksheuskaya-709412-1616403.jpg&fm=jpg");
+  align-items: center;
+  justify-content: center;
+}
+
+.glass-button {
+  color: rgba(255, 255, 255, 0.7);;
+  margin: 5px;
+  padding: 1rem 1.5rem;
+  width: fit-content;
+  height: fit-content;
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 38px 19px rgba(255, 255, 255, 1.9);
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.01),
+    inset 0 0 3em .05em rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+}
+
+.glass-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    transparent,
+    rgba(255, 255, 255, 0.03)
+  );
+}
+
+.glass-button:hover {
+  
+}
+
+.glass-card {
+  color: rgba(255, 255, 255, 0.7);;
+  margin: 5px;
+  padding: 1rem 1.5rem;
+  width: 240px;
+  height: 360px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.01),
+    inset 0 0 3em .05em rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -25,7 +89,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.1),
     transparent
   );
 }
@@ -39,8 +103,8 @@
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.1),
     transparent,
-    rgba(255, 255, 255, 0.3)
+    rgba(255, 255, 255, 0.03)
   );
 }
