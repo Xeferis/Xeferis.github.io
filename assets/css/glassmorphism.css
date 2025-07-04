@@ -11,7 +11,7 @@
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 8px 20px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.05),
     inset 0 -1px 0 rgba(255, 255, 255, 0.01),
     inset 0 0 3em .05em rgba(255, 255, 255, 0.1);
@@ -50,7 +50,7 @@
 }
 
 .glass-button {
-  transition: .5s, box-shadow .1s, background .1s;
+  transition: backdrop-filter 0.5s ease, -webkit-backdrop-filter 0.5s ease .5s, box-shadow .1s, background .1s;
 }
 
 .glass-button:hover {
@@ -72,6 +72,7 @@
 }
 
 .glass-nav{
+  
   display: flex;
   justify-content: space-evenly;
   padding: 1px;
@@ -92,7 +93,7 @@
 .glass-nav > button:hover {
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 8px 20px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.05),
     inset 0 -1px 0 rgba(255, 255, 255, 0.01),
     inset 0 0 3em .05em rgba(255, 255, 255, 0.1);
@@ -169,4 +170,25 @@
   padding: 0;
   width: 100px;
   height: 100px;
+}
+
+.glass-form {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.glass-form > div {
+  background: transparent;
+  padding: 0;
+}
+
+.glass-form > * > label {
+  margin: 20px;
+  font-size: 1.1em;
+}
+
+.glass-form > * > input {
+  margin: 0;
+  box-shadow: inset .15em .15em .4em rgba(0,0,0,.3),
+              inset -.15em -.15em .4em rgba(255,255,255,.2);
 }
