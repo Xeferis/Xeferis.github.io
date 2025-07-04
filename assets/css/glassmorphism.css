@@ -79,6 +79,7 @@
 }
 
 .glass-nav > button {
+  transition: .3s;
   text-shadow: 0px 0px 15px black;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.0);
@@ -93,15 +94,21 @@
 .glass-nav > button:hover {
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 
-    0 8px 20px rgba(0, 0, 0, 0.3),
+    0 8px 32px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.05),
     inset 0 -1px 0 rgba(255, 255, 255, 0.01),
     inset 0 0 3em .05em rgba(255, 255, 255, 0.1);
 }
 
+.glass-nav > button:active {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset .3em .3em .8em rgba(0,0,0,.3),
+              inset -.3em -.3em .8em rgba(255,255,255,.2)
+}
+
 .glass-nav > .active {
-  transition: .5s, box-shadow .1s, background .1s;
-  background: rgba(255, 255, 255, 0);
+  transition: .5s, box-shadow .3s, background .3s;
+  background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -146,16 +153,7 @@
 }
 
 .glass-nav > .active:hover {
-  backdrop-filter: blur(150px);
-  -webkit-backdrop-filter: blur(150px);
-  box-shadow: inset .15em .15em .4em rgba(0,0,0,.3),
-              inset -.15em -.15em .4em rgba(255,255,255,.2);
-}
-
-.glass-nav > .active:active {
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: inset .3em .3em .8em rgba(0,0,0,.3),
-              inset -.3em -.3em .8em rgba(255,255,255,.2)
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .glass-img {
