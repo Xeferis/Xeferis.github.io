@@ -1,5 +1,5 @@
 .glass-button {
-  transition: 1s;
+  transition: .5s, box-shadow .1s, background .1s;
   color: rgba(255, 255, 255, 0.7);;
   margin: 5px;
   padding: 1rem 1.5rem;
@@ -54,6 +54,12 @@
   -webkit-backdrop-filter: blur(150px);
   box-shadow: inset .15em .15em .4em rgba(0,0,0,.3),
               inset -.15em -.15em .4em rgba(255,255,255,.2);
+}
+
+.glass-button:active {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: inset .3em .3em .8em rgba(0,0,0,.3),
+              inset -.3em -.3em .8em rgba(255,255,255,.2)
 }
 
 .glass-card {
