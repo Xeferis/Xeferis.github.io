@@ -69,3 +69,18 @@
   width: 240px;
   height: 360px;
 }
+
+.glass-nav{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1px;
+}
+
+.glass-nav > a {
+  border-radius: 14px;
+  width: fit-content;
+  height: fit-content;
+  color: rgba(255, 255, 255, 0.7);;
+  margin: 5px;
+  padding: 1rem 1.5rem;
+}
