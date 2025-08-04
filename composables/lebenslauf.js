@@ -71,6 +71,8 @@ export default function () {
         { name: "Neuronale Netze", level: 1 },
         { name: "machine learning", level: 1 },
         { name: "tensorflow", level: 1 },
+        { name: "VG Studio", level: 3 },
+        { name: "Röntgentechnik", level: 3 },
       ],
     },
     {
