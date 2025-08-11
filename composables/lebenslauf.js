@@ -3,16 +3,6 @@ export default function () {
   const lebenslauf = [
     {
       id: 0,
-      title: "Gymnasium",
-      institution: "Dr. Georg-August-Zinn Schule Gudensberg",
-      von_date: "2008-09-01",
-      bis_date: "2013-06-01",
-      abschluss: "Mittlere Reife",
-      beschreibung: "",
-      wissen: [],
-    },
-    {
-      id: 1,
       title: "Fachoberschule",
       institution: "Max-Eyth-Schule Kassel",
       von_date: "2013-09-01",
@@ -28,21 +18,7 @@ export default function () {
       ],
     },
     {
-      id: 2,
-      title: "FOS - Praktikum",
-      institution: "Volkswagen AG",
-      von_date: "2013-09-01",
-      bis_date: "2014-06-01",
-      abschluss: "",
-      beschreibung: "PC Werkstatt",
-      wissen: [
-        { name: "Backups", level: 1 },
-        { name: "Installationen", level: 1 },
-        { name: "Reparaturen", level: 1 },
-      ],
-    },
-    {
-      id: 3,
+      id: 1,
       title: "Ausbildung",
       institution: "Volkswagen AG & Oscar-von-Miller-Schule Kassel",
       von_date: "2015-09-01",
@@ -57,7 +33,7 @@ export default function () {
       ],
     },
     {
-      id: 4,
+      id: 2,
       title: "Eingesetzt in der Qualitätssicherung",
       institution: "Volkswagen AG",
       von_date: "2018-09-01",
@@ -76,7 +52,7 @@ export default function () {
       ],
     },
     {
-      id: 5,
+      id: 3,
       title: "Techniker",
       institution: "OVM",
       von_date: "2022-09-01",
