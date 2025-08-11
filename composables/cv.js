@@ -155,5 +155,12 @@ export default function () {
       ],
     },
   ];
-  return lebenslauf;
+  return {
+    "schule": lebenslauf_Schule,
+    "beruf": lebenslauf_Beruf,
+    "zertifikate": zertifikate,
+    "skills": skills,
+    "sprache": sprachen,
+    "pintrst": personal_intrest
+  };
 }
