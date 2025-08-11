@@ -1,5 +1,5 @@
 export default function () {
-  // Level: 1 = Abfänger, 2 = Grundkenntnisse, 3 = Fortgeschritten, 4 = Experte
+  // Level: 1 = Anfänger, 2 = Grundkenntnisse, 3 = Fortgeschritten, 4 = Experte
   // TODO: Correct Dates
   const sprachen = [
     {
@@ -110,7 +110,7 @@ export default function () {
         { name: "Python", level: 2 },
         { name: "C#", level: 1 },
         { name: "Neuronale Netze", level: 1 },
-        { name: "machine learning", level: 1 },
+        { name: "Machine Learning", level: 1 },
         { name: "Tensorflow/Keras", level: 1 },
         { name: "JIRA", level: 1 },
         { name: "VG Studio", level: 3 },
@@ -129,10 +129,10 @@ export default function () {
       beschreibung: "Bereich: Informationstechnik",
       wissen: [
         { name: "Datenbanken", level: 1 },
-        { name: "c++", level: 1 },
-        { name: "java", level: 1 },
-        { name: "html", level: 1 },
-        { name: "css", level: 1 },
+        { name: "C++", level: 1 },
+        { name: "Java", level: 1 },
+        { name: "HTML", level: 1 },
+        { name: "CSS", level: 1 },
       ],
     },
     {
@@ -143,9 +143,9 @@ export default function () {
       bis_date: "2026-06-01",
       abschluss: "Bachelor Professional in Computer Science",
       wissen: [
-        { name: "python", level: 3 },
-        { name: "html", level: 2 },
-        { name: "css", level: 2 },
+        { name: "Python", level: 3 },
+        { name: "HTML", level: 2 },
+        { name: "CSS", level: 2 },
         { name: "Datenbanken (MySQL)", level: 2 },
         { name: "JavaScript", level: 2 },
         { name: "TypeScript", level: 2 },
