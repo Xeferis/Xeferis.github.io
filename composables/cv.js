@@ -1,4 +1,5 @@
 export default function () {
+  // Level: 1 = Abfänger, 2 = Grundkenntnisse, 3 = Fortgeschritten, 4 = Experte
   // TODO: Correct Dates
   const sprachen = [
     {
@@ -105,9 +106,9 @@ export default function () {
       abschluss: "Güteprüfer im Messraum",
       beschreibung: "Tätigkeit: Programmierer für Röntgen-/CT-Systeme",
       wissen: [
-        { name: "powershell", level: 1 },
-        { name: "python", level: 2 },
-        { name: "c#", level: 1 },
+        { name: "PowerShell", level: 1 },
+        { name: "Python", level: 2 },
+        { name: "C#", level: 1 },
         { name: "Neuronale Netze", level: 1 },
         { name: "machine learning", level: 1 },
         { name: "Tensorflow/Keras", level: 1 },
@@ -146,7 +147,7 @@ export default function () {
         { name: "html", level: 2 },
         { name: "css", level: 2 },
         { name: "Datenbanken (MySQL)", level: 2 },
-        { name: "JaveScript", level: 2 },
+        { name: "JavaScript", level: 2 },
         { name: "TypeScript", level: 2 },
         { name: "GIT", level: 2 },
         { name: "VUE + NUXT", level: 1 },
