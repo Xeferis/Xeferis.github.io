@@ -1,5 +1,5 @@
 <script setup>
-const data = lebenslauf();
+const data = cv();
 </script>
 
 <template>
