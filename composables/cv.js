@@ -10,7 +10,7 @@ export default function () {
   const skills = [
     "Teamorientiert",
     "logisches Denken",
-    "Problemlöse fähigkeit",
+    "Problemlösefähigkeit",
     "Perfektionistisch",
     "Agiles Arbeiten",
     "Kreativ"
@@ -19,7 +19,7 @@ export default function () {
     "Full Stack Entwicklung",
     "Smarthome",
     "Automatisieren und Perfektionieren von täglichen Abläufen",
-    "Sportliche Herausfprderungen (Kraftsport, Gravelbike)",
+    "Sportliche Herausforderungen (Kraftsport, Gravelbike)",
     "Musik (Gitarrist in einer Band)"
   ]
   const zertifikate = [
@@ -37,7 +37,7 @@ export default function () {
       id: 3,
       title: "Microsoft 365 - Sharepoint Online Advanced - Dokumentenbasierte Zusammenarbeit",
       institution: "Volkswagen AG"
-    }
+    },
     {
       id: 4,
       title: "CAEPyPi - Softwareentwicklung bei Volkswagen",
@@ -66,14 +66,14 @@ export default function () {
     {
       id: 9,
       title: "Python Programmierung",
-      institution: "Oskar-von-Miller Schule"
+      institution: "Oskar-von-Miller Schule Kassel"
     },
   ]
   const lebenslauf_Beruf = [
     {
       id: 0,
       title: "Ausbildung",
-      institution: "Volkswagen AG & Oscar-von-Miller-Schule Kassel",
+      institution: "Volkswagen AG & Oskar-von-Miller-Schule Kassel",
       von_date: "2015-09-01",
       bis_date: "2018-06-01",
       abschluss: "Elektroniker für Automatisierungstechnik",
@@ -101,7 +101,7 @@ export default function () {
       title: "Eingesetzt in der Qualitätssicherung - Giesserei",
       institution: "Volkswagen AG",
       von_date: "2020-02-01",
-      bis_date: "Today",
+      bis_date: new Date().toISOString().split('T')[0],
       abschluss: "Güteprüfer im Messraum",
       beschreibung: "Tätigkeit: Programmierer für Röntgen-/CT-Systeme",
       wissen: [
@@ -125,7 +125,7 @@ export default function () {
       von_date: "2013-09-01",
       bis_date: "2015-06-01",
       abschluss: "Fachhochschulreife",
-      beschreibung: "",
+      beschreibung: "Bereich: Informationstechnik",
       wissen: [
         { name: "Datenbanken", level: 1 },
         { name: "c++", level: 1 },
@@ -137,7 +137,7 @@ export default function () {
     {
       id: 2,
       title: "Techniker",
-      institution: "OVM",
+      institution: "Oskar-von-Miller-Schule Kassel",
       von_date: "2022-09-01",
       bis_date: "2026-06-01",
       abschluss: "Bachelor Professional in Computer Science",
@@ -146,7 +146,8 @@ export default function () {
         { name: "html", level: 2 },
         { name: "css", level: 2 },
         { name: "Datenbanken (MySQL)", level: 2 },
-        { name: "Javescript", level: 2 },
+        { name: "JaveScript", level: 2 },
+        { name: "TypeScript", level: 2 },
         { name: "GIT", level: 2 },
         { name: "VUE + NUXT", level: 1 },
         { name: "Networks", level: 1 },
