@@ -55,16 +55,21 @@ export default function () {
     },
     {
       id: 7,
+      title: "Windows 11 Admin",
+      institution: "Volkswagen AG"
+    },
+    {
+      id: 8,
       title: "CCNA1",
       institution: "Cisco NetAcad"
     },
     {
-      id: 8,
+      id: 9,
       title: "CCNA2",
       institution: "Cisco NetAcad"
     },
     {
-      id: 9,
+      id: 10,
       title: "Python Programmierung",
       institution: "Oskar-von-Miller Schule Kassel"
     },
@@ -138,7 +143,7 @@ export default function () {
       id: 2,
       title: "Techniker",
       institution: "Oskar-von-Miller-Schule Kassel",
-      von_date: "2022-08-01",
+      von_date: "2023-08-01",
       bis_date: "2027-08-01",
       abschluss: "Bachelor Professional in Computer Science",
       wissen: [
