@@ -1,6 +1,5 @@
 export default function () {
   // Level: 1 = Anfänger, 2 = Grundkenntnisse, 3 = Fortgeschritten, 4 = Experte
-  // TODO: Correct Dates
   const sprachen = [
     {
       id: 0,
@@ -90,8 +89,8 @@ export default function () {
       id: 1,
       title: "Eingesetzt in der Qualitätssicherung - Giesserei",
       institution: "Volkswagen AG",
-      von_date: "2018-09-01",
-      bis_date: "2020-02-01",
+      von_date: "2018-06-01",
+      bis_date: "2019-11-01",
       abschluss: "Güteprüfer im Messraum",
       beschreibung: "Tätigkeit: Serienmitarbeiter",
       wissen: [
@@ -101,7 +100,7 @@ export default function () {
       id: 2,
       title: "Eingesetzt in der Qualitätssicherung - Giesserei",
       institution: "Volkswagen AG",
-      von_date: "2020-02-01",
+      von_date: "2019-11-01",
       bis_date: new Date().toISOString().split('T')[0],
       abschluss: "Güteprüfer im Messraum",
       beschreibung: "Tätigkeit: Programmierer für Röntgen-/CT-Systeme",
@@ -123,8 +122,8 @@ export default function () {
       id: 0,
       title: "Fachoberschule",
       institution: "Max-Eyth-Schule Kassel",
-      von_date: "2013-09-01",
-      bis_date: "2015-06-01",
+      von_date: "2013-08-01",
+      bis_date: "2015-08-01",
       abschluss: "Fachhochschulreife",
       beschreibung: "Bereich: Informationstechnik",
       wissen: [
@@ -139,8 +138,8 @@ export default function () {
       id: 2,
       title: "Techniker",
       institution: "Oskar-von-Miller-Schule Kassel",
-      von_date: "2022-09-01",
-      bis_date: "2026-06-01",
+      von_date: "2022-08-01",
+      bis_date: "2027-08-01",
       abschluss: "Bachelor Professional in Computer Science",
       wissen: [
         { name: "Python", level: 3 },
