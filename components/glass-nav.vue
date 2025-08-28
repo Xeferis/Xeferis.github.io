@@ -22,7 +22,7 @@ const orbLeft = computed(() => {
     <div class="glass relative top-9 left-1/2 -translate-x-1/2 flex justify-center items-center w-fit h-14 gap-4 p-4 rounded-full">
         <div ref="orb" class="glass absolute w-[85px] h-10 left-[5px] transition-all duration-300"  :style="{ left: orbLeft }"></div>
         <label class="flex justify-center items-center w-16">
-            <input type="radio" name="menu" value="one" v-model="selected" checked class="appearance-none" />
+            <input type="radio" name="menu" value="one" v-model="selected" class="appearance-none" />
             Home
         </label>
         <label class="flex justify-center items-center w-16">
