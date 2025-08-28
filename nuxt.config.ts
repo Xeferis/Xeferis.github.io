@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "~/assets/css/main.css",
     "~/assets/css/custom/cursor.css",
     "~/assets/css/custom/main.css",
+    "~/assets/css/custom/glassmorphism.css",
   ],
   postcss: {
     plugins: {
