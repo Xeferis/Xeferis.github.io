@@ -23,15 +23,15 @@ const orbLeft = computed(() => {
         <div ref="orb" class="glass absolute w-[85px] h-10 left-[5px] transition-all duration-300"  :style="{ left: orbLeft }"></div>
         <label class="flex justify-center items-center w-16">
             <input type="radio" name="menu" value="one" v-model="selected" checked class="appearance-none" />
-            One
+            Home
         </label>
         <label class="flex justify-center items-center w-16">
             <input type="radio" name="menu" value="two" v-model="selected" class="appearance-none" />
-            Two
+            About
         </label>
         <label class="flex justify-center items-center w-16">
             <input type="radio" name="menu" value="three" v-model="selected" class="appearance-none" />
-            Three
+            Contact
         </label>
     </div>
 </template>
