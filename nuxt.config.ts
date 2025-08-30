@@ -105,7 +105,7 @@ export default defineNuxtConfig({
       },
       bodyAttrs: {
         class:
-          "bg-main flex justify-center items-center min-h-screen min-w-screen",
+          "glass-bg flex justify-center items-center min-h-screen min-w-screen",
       },
     },
   },

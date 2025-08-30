@@ -3,6 +3,22 @@ body {
   --c-light: #fff;
   --c-dark: #000;
 
+  --c-content: #e1e1e1;
+  --c-action: #03d5ff;
+
+  --c-bg: #1b1b1d;
+
+  --glass-reflex-dark: 2;
+  --glass-reflex-light: 0.3;
+
+  --saturation: 150%;
+}
+
+body:has(input[name="colormode"]:checked) {
+  --c-glass: #bbbbbc;
+  --c-light: #fff;
+  --c-dark: #000;
+
   --c-content: #224;
   --c-action: #0052f5;
 
@@ -14,10 +30,19 @@ body {
   --saturation: 150%;
 }
 
+.glass-bg {
+  background: var(--c-bg);
+  color: var(--c-content);
+  transition:
+    background 400ms cubic-bezier(1, 0, 0.4, 1),
+    color 400ms cubic-bezier(1, 0, 0.4, 1);
+}
+
 .glass {
   z-index: 1;
   text-shadow: 0px 0px 15px black;
   color: rgba(255, 255, 255, 0.7);
+  stroke: rgba(255, 255, 255, 0.7);
   background-color: color-mix(in srgb, var(--c-glass) 12%, transparent);
   backdrop-filter: blur(8px) url(#lqGlass) saturate(var(--saturation));
   -webkit-backdrop-filter: blur(8px) saturate(var(--saturation));
@@ -69,26 +94,115 @@ body {
         transparent
       );
   overflow: hidden;
+  transition:
+    background-color 400ms cubic-bezier(1, 0, 0.4, 1),
+    box-shadow 400ms cubic-bezier(1, 0, 0.4, 1);
 }
 
-.move-left {
-  transform-origin: left;
-  animation: liquid-inertia 500ms ease;
+.glass-nav {
+  @apply glass absolute left-1/2 top-9 flex h-14 w-fit -translate-x-1/2 items-center justify-center gap-4 rounded-full p-4;
 }
 
-.move-right {
+.glass-nav > label {
+  @apply z-10 flex w-16 cursor-pointer items-center justify-center;
+}
+
+.glass-nav > label > input[type="radio"] {
+  @apply appearance-none;
+}
+
+.glass-nav::after {
+  @apply glass;
+  content: "";
+  width: 84px;
+  height: calc(100% - 10px);
+  position: absolute;
+  left: 6px;
+  border-radius: inherit;
+  background: inherit;
+  z-index: 2;
+}
+
+.glass-nav:has(input[value="one"]:checked):after {
+  translate: 0 0;
   transform-origin: right;
-  animation: liquid-inertia 500ms ease;
+  transition: translate 500ms cubic-bezier(1, 0, 0.4, 1);
+  animation: liquid-inertia 550ms ease;
+}
+
+.glass-nav:has(input[value="two"]:checked):after {
+  translate: 78px 0;
+  transform-origin: middle;
+  transition: translate 450ms cubic-bezier(1, 0, 0.4, 1);
+  animation: liquid-inertia2 550ms ease-out;
+}
+.glass-nav:has(input[value="three"]:checked):after {
+  translate: 160px 0;
+  transform-origin: left;
+  transition: translate 500ms cubic-bezier(1, 0, 0.4, 1);
+  animation: liquid-inertia3 550ms ease;
 }
 
 @keyframes liquid-inertia {
   0% {
-    transform: scale(1 1);
+    scale: 1 1;
   }
   50% {
-    transform: scale(1.2 1);
+    scale: 1.2 1;
   }
   100% {
-    transform: scale(1 1);
+    scale: 1 1;
   }
+}
+
+@keyframes liquid-inertia2 {
+  0% {
+    scale: 1 1;
+  }
+  50% {
+    scale: 1.2 1;
+  }
+  100% {
+    scale: 1 1;
+  }
+}
+
+@keyframes liquid-inertia3 {
+  0% {
+    scale: 1 1;
+  }
+  50% {
+    scale: 1.2 1;
+  }
+  100% {
+    scale: 1 1;
+  }
+}
+
+.glass-modeswitcher {
+  @apply glass absolute -right-10 top-9 flex h-14 w-14 -translate-x-full items-center justify-center rounded-full p-4;
+  transition:
+    translate 200ms cubic-bezier(1, 0, 0.4, 1),
+    scale 200ms cubic-bezier(1, 0, 0.4, 1);
+}
+
+.glass-modeswitcher:hover {
+  translate: 6px 0;
+  scale: 1.1;
+}
+
+.glass-modeswitcher:has(input:active) {
+  translate: 0 0;
+  scale: 1;
+  transition:
+    translate 100ms cubic-bezier(1, 0, 0.4, 1),
+    scale 100ms cubic-bezier(1, 0, 0.4, 1);
+}
+
+.glass-modeswitcher > label {
+  @apply z-10 flex w-16 cursor-pointer items-center justify-center;
+}
+
+.glass-modeswitcher > label > input[type="checkbox"] {
+  @apply appearance-none;
 }
