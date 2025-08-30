@@ -206,3 +206,20 @@ body:has(input[name="colormode"]:checked) {
 .glass-modeswitcher > label > input[type="checkbox"] {
   @apply appearance-none;
 }
+
+.glass-btn {
+  @apply glass relative inline-flex items-center justify-center rounded-full p-4;
+}
+
+.glass-btn:hover {
+  background-color: color-mix(in srgb, var(--c-glass) 20%, transparent);
+  backdrop-filter: blur(20px) url(#lqGlass) saturate(var(--saturation));
+  -webkit-backdrop-filter: blur(20px) saturate(var(--saturation));
+  transition: all 200ms;
+}
+
+.glass-btn:active {
+  translate: 0 5px;
+  scale: 1.1 1;
+  transition: all 100ms cubic-bezier(1, 0, 0.4, 1);
+}
