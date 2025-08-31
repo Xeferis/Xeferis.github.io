@@ -1,4 +1,3 @@
-
 <script setup>
 import { ref } from 'vue';
 
@@ -6,7 +5,7 @@ const mode = ref(false);
 </script>
 
 <template>
-    <div class="glass-modeswitcher">
+    <div class="glass-modeswitcher origin-center" :class="{ 'liquid-click-animation': mode , 'liquid-click-animation2': !mode}">
         <label class="group">
             <input id="colormode" type="checkbox" name="colormode" v-model="mode"/>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 absolute group-has-[input:checked]:opacity-100 opacity-0 transition-all duration-500">

@@ -5,6 +5,7 @@ body {
 
   --c-content: #e1e1e1;
   --c-action: #03d5ff;
+  --c-accent: #e19c6b;
 
   --c-bg: #1b1b1d;
 
@@ -21,6 +22,7 @@ body:has(input[name="colormode"]:checked) {
 
   --c-content: #224;
   --c-action: #0052f5;
+  --c-accent: #d67129;
 
   --c-bg: #e8e8e9;
 
@@ -179,24 +181,52 @@ body:has(input[name="colormode"]:checked) {
   }
 }
 
+.liquid-click-animation {
+  animation: liquid-inertia 500ms ease;
+}
+
+.liquid-click-animation2 {
+  animation: liquid-inertia2 500ms ease;
+}
+
 .glass-modeswitcher {
   @apply glass absolute -right-10 top-9 flex h-14 w-14 -translate-x-full items-center justify-center rounded-full p-4;
-  transition:
-    translate 200ms cubic-bezier(1, 0, 0.4, 1),
-    scale 200ms cubic-bezier(1, 0, 0.4, 1);
+  transition: all 200ms cubic-bezier(1, 0, 0.4, 1);
 }
 
-.glass-modeswitcher:hover {
-  translate: 6px 0;
-  scale: 1.1;
+.glass-modeswitcher:hover::before {
+  @apply rounded-full;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  box-shadow: 0 0 20px 10px color-mix(in srgb, var(--c-accent) 60%, transparent);
 }
 
-.glass-modeswitcher:has(input:active) {
-  translate: 0 0;
-  scale: 1;
-  transition:
-    translate 100ms cubic-bezier(1, 0, 0.4, 1),
-    scale 100ms cubic-bezier(1, 0, 0.4, 1);
+.glass-modeswitcher:has(input:active)::before {
+  @apply rounded-full;
+  transform-origin: right;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  box-shadow: 0 0 20px 10px color-mix(in srgb, var(--c-accent) 60%, transparent);
+  animation: button-press 500ms forwards;
+}
+
+@keyframes button-press {
+  0% {
+    scale: 1 1;
+    box-shadow: 0 0 20px 10px
+      color-mix(in srgb, var(--c-accent) 60%, transparent);
+  }
+  50% {
+    scale: 1.1 1;
+    box-shadow: 0 0 20px 15px color-mix(in srgb, white 60%, transparent);
+  }
+  100% {
+    scale: 1 1;
+    box-shadow: 0 0 20px 20px
+      color-mix(in srgb, var(--c-accent) 60%, transparent);
+  }
 }
 
 .glass-modeswitcher > label {
@@ -211,15 +241,21 @@ body:has(input[name="colormode"]:checked) {
   @apply glass relative inline-flex items-center justify-center rounded-full p-4;
 }
 
-.glass-btn:hover {
-  background-color: color-mix(in srgb, var(--c-glass) 20%, transparent);
-  backdrop-filter: blur(20px) url(#lqGlass) saturate(var(--saturation));
-  -webkit-backdrop-filter: blur(20px) saturate(var(--saturation));
-  transition: all 200ms;
+.glass-btn:hover::before {
+  @apply rounded-full;
+  content: "";
+  width: 40%;
+  z-index: -1;
+  position: absolute;
+  box-shadow: 0 0 20px 10px color-mix(in srgb, var(--c-accent) 60%, transparent);
 }
 
-.glass-btn:active {
-  translate: 0 5px;
-  scale: 1.1 1;
-  transition: all 100ms cubic-bezier(1, 0, 0.4, 1);
+.glass-btn:active::before {
+  @apply rounded-full;
+  transform-origin: center;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  box-shadow: 0 0 20px 10px color-mix(in srgb, var(--c-accent) 60%, transparent);
+  animation: button-press 500ms forwards;
 }
